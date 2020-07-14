@@ -9,6 +9,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
+import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.spigotmc.event.entity.EntityDismountEvent;
@@ -16,6 +17,15 @@ import org.spigotmc.event.entity.EntityDismountEvent;
 import java.util.List;
 
 public class MountEvent implements Listener {
+
+    @EventHandler
+    public void inventoryClick(InventoryClickEvent e) {
+        Player p = (Player) e.getWhoClicked();
+        if (isRiding(p) && e.getClickedInventory().equals(e.getInventory())) {
+            e.setCancelled(true);
+        }
+    }
+
     @EventHandler
     public void dismount(EntityDismountEvent e) {
         if (e.getEntity() instanceof Player && isRiding((Player) e.getEntity())) {
