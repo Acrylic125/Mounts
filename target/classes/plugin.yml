@@ -1,0 +1,11 @@
+name: Mounts
+version: 1.0-SNAPSHOT
+main: com.acrylic.mounts.Mounts
+prefix: Mounts
+authors: [Acrylic]
+description: Mounts.
+commands:
+  mount:
+    aliases: [m, mounts]
+    description: Main command for mounts.
+    usage: /<command>

@@ -1,0 +1,14 @@
+Prefix: '&2[&aMounts&2]&a '
+Non-Prefix Text: '  &f'
+No-Permission-Prefix: '&c&lHey! '
+
+#Give the player the <Permission> to allow them to use
+#certain features. For example (default "mounts"), 'mounts.use.standard', 'mounts.use.zombie'
+#and 'mounts.use.skeleton'. If you set it to 'ride', it will be 'mount.use.standard' etc...
+Permission: 'mounts'
+
+#The name of the mount. Use %player% to specify the rider's name. Do note it is case sensitive!
+mount name: '&f%player%''s &aMount'
+#The amount of health the horses spawn with. If you want to use the default
+#value, set it to -1. Do note that the default is not consistent.
+mount health: 10
